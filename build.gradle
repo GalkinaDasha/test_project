@@ -1,14 +1,21 @@
-apply plugin: 'java'
-
-repositories {
-    mavenCentral()
+plugins{
+	id 'java'
+	id 'jacoco'
 }
-
+repositories{
+	mavenCentral()
+}
 dependencies {
-    testCompile 'junit:junit:4.12'
-    testCompile("org.assertj:assertj-core:3.11.1")
+    
+	testCompile 'junit:junit:4.12'
+    
+	testCompile("org.assertj:assertj-core:3.11.1")
+
 }
+
 
 test {
-    outputs.upToDateWhen { false }
+    
+	outputs.upToDateWhen { false }
+
 }
